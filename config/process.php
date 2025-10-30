@@ -43,7 +43,7 @@
       $Extra = $data["Extra"];
       $id = $data["id"];
 
-      $query = "UPDATE contatos 
+      $query = "UPDATE Cdgarmo
                 SET nome = :nome, Cdgarmo = :Cdgarmo, Extra = :Extra 
                 WHERE id = :id";
 
@@ -57,7 +57,7 @@
       try {
 
         $stmt->execute();
-        $_SESSION["msg"] = "Contato atualizado!";
+        $_SESSION["msg"] = "Cdgarmo atualizado!";
     
       } catch(PDOException $e) {
         // erro na conexão
@@ -78,7 +78,7 @@
       try {
 
         $stmt->execute();
-        $_SESSION["msg"] = "Contato removido!";
+        $_SESSION["msg"] = "Cdgarmo removido!";
     
       } catch(PDOException $e) {
         // erro na conexão
@@ -100,7 +100,7 @@
       $id = $_GET["id"];
     }
 
-    // Retorna o dado de um contato
+    // Retorna o dado de um Cdgarmo
     if(!empty($id)) {
 
       $query = "SELECT * FROM Cdgarmor WHERE id = :id";
