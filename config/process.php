@@ -17,7 +17,7 @@
       $phone = $data["phone"];
       $observations = $data["observations"];
 
-      $query = "INSERT INTO Listas (name, phone, observations) VALUES (:name, :phone, :observations)";
+      $query = "INSERT INTO Produto (name, phone, observations) VALUES (:name, :phone, :observations)";
 
       $stmt = $conn->prepare($query);
 

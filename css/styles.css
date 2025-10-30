@@ -51,7 +51,7 @@
 }
 
 .delete-icon {
-  color: #ad0011d7;
+  color: #ff7700d7;
 }
 
 #empty-list-text {
@@ -59,9 +59,9 @@
 }
 
 #msg {
-  color: #35b000a3;
-  background-color: #D4EDDA;
-  border: 1px solid #C3E6CB;
+  color: #00bf00a3;
+  background-color: #002ddf;
+  border: 1px solid #0018d0;
   padding: 10px;
   text-align: center;
   max-width: 500px;
@@ -86,7 +86,7 @@
 }
 
 #back-link {
-  border: 1px solid #000fb3be;
+  border: 1px solid #b30000be;
   color: #bd0000;
   border-radius: 4px;
   padding: 5px;
