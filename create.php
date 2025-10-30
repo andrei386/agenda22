@@ -8,15 +8,15 @@
       <input type="hidden" name="type" value="create">
       <div class="form-group">
         <label for="name">Nombre de Contacto:</label>
-        <input type="text" class="form-control" id="name" name="name" placeholder="Digite o nome" required>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Introduce el nombre" required>
       </div>
       <div class="form-group">
         <label for="phone">Telefono de contacto:</label>
-        <input type="text" class="form-control" id="phone" name="phone" placeholder="Digite o telefone" required>
+        <input type="text" class="form-control" id="phone" name="phone" placeholder="Introduce el telefono" required>
       </div>
       <div class="form-group">
         <label for="observations">Observaciones:</label>
-        <textarea type="text" class="form-control" id="observations" name="observations" placeholder="Insira as observações" rows="3"></textarea>
+        <textarea type="text" class="form-control" id="observations" name="observations" placeholder="Introduce comentarios" rows="3"></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Registro</button>
     </form>

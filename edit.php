@@ -9,15 +9,15 @@
       <input type="hidden" name="id" value="<?= $contact['id'] ?>">
       <div class="form-group">
         <label for="name">Nombre de Contacto:</label>
-        <input type="text" class="form-control" id="name" name="name" placeholder="Digite o nome" value="<?= $contact['name'] ?>" required>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Introduce el nombre" value="<?= $contact['name'] ?>" required>
       </div>
       <div class="form-group">
         <label for="phone">Telefono de contacto:</label>
-        <input type="text" class="form-control" id="phone" name="phone" placeholder="Digite o telefone" value="<?= $contact['phone'] ?>" required>
+        <input type="text" class="form-control" id="phone" name="phone" placeholder="Introduce el telefono" value="<?= $contact['phone'] ?>" required>
       </div>
       <div class="form-group">
         <label for="observations">Observaciones:</label>
-        <textarea type="text" class="form-control" id="observations" name="observations" placeholder="Insira as observações" rows="3"><?= $contact['observations'] ?></textarea>
+        <textarea type="text" class="form-control" id="observations" name="observations" placeholder="Introducir observaciones" rows="3"><?= $contact['observations'] ?></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Para actualizar</button>
     </form>
