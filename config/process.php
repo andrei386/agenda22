@@ -44,13 +44,13 @@
       $id = $data["id"];
 
       $query = "UPDATE contatos 
-                SET nome = :nome, Cdg armo = :Cdg armo, Extra = :Extra 
+                SET nome = :nome, Cdgarmo = :Cdgarmo, Extra = :Extra 
                 WHERE id = :id";
 
       $stmt = $conn->prepare($query);
 
       $stmt->bindParam(":nome", $n);
-      $stmt->bindParam(":Cdg armo", $Cdgarmo);
+      $stmt->bindParam(":Cdgarmo", $Cdgarmo);
       $stmt->bindParam(":Extra", $Extra);
       $stmt->bindParam(":id", $id);
 
@@ -69,7 +69,7 @@
 
       $id = $data["id"];
 
-      $query = "DELETE FROM contacts WHERE id = :id";
+      $query = "DELETE FROM Cdgarmor WHERE id = :id";
 
       $stmt = $conn->prepare($query);
 
@@ -103,7 +103,7 @@
     // Retorna o dado de um contato
     if(!empty($id)) {
 
-      $query = "SELECT * FROM contacts WHERE id = :id";
+      $query = "SELECT * FROM Cdgarmor WHERE id = :id";
 
       $stmt = $conn->prepare($query);
 
@@ -118,7 +118,7 @@
       // Retorna todos os contatos
       $contacts = [];
 
-      $query = "SELECT * FROM contacts";
+      $query = "SELECT * FROM Cdgarmor";
 
       $stmt = $conn->prepare($query);
 
