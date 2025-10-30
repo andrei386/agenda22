@@ -15,7 +15,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET nomeS utf8mb4 */;
 
 --
 -- Banco de dados: `agenda`
@@ -27,21 +27,21 @@ CREATE DATABASE Cliente;
 
 Usar datos;
 --
--- Estrutura da tabela `contacts`
+-- Estrutura da tabela `Cdgarmo`
 --
 
-CREATE TABLE `contacts` (
+CREATE TABLE `Cdgarmo` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `phone` varchar(20) DEFAULT NULL,
-  `observations` text DEFAULT NULL
+  `nome` varchar(255) DEFAULT NULL,
+  `Cdgarmo` varchar(20) DEFAULT NULL,
+  `Extra` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `contacts`
+-- Extraindo dados da tabela `Cdgarmo`
 --
 
-INSERT INTO `contacts` (`id`, `name`, `phone`, `observations`) VALUES
+INSERT INTO `Cdgarmo` (`id`, `nome`, `Cdgarmo`, `Extra`) VALUES
 (1, 'Neto horario', '11999998888', 'Niggar'),
 (4, 'Valkyria (CR)', '(11)9999:4698', 'WoW'),
 (5, 'Peter', '119664:2267', 'Spi'),
@@ -53,9 +53,9 @@ INSERT INTO `contacts` (`id`, `name`, `phone`, `observations`) VALUES
 --
 
 --
--- Índices para tabela `contacts`
+-- Índices para tabela `Cdgarmo`
 --
-ALTER TABLE `contacts`
+ALTER TABLE `Cdgarmo`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -63,9 +63,9 @@ ALTER TABLE `contacts`
 --
 
 --
--- AUTO_INCREMENT de tabela `contacts`
+-- AUTO_INCREMENT de tabela `Cdgarmo`
 --
-ALTER TABLE `contacts`
+ALTER TABLE `Cdgarmo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 

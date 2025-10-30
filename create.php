@@ -15,7 +15,7 @@
         <input type="text" class="form-control" id="Cdgarmo" nome="Cdgarmo" placeholder="Introduce el Cdgarmo" required>
       </div>
       <div class="form-group">
-        <label for="Extra">Observaciones:</label>
+        <label for="Extra">Extra:</label>
         <textarea type="text" class="form-control" id="Extra" nome="Extra" placeholder="Introduce comentarios" rows="3"></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Registro</button>

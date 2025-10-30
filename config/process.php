@@ -62,7 +62,7 @@
       } catch(PDOException $e) {
         // erro na conexão
         $error = $e->getMessage();
-        echo "Não deu: $error";
+        echo "erro: $error";
       }
 
     } else if($data["type"] === "delete") {
@@ -83,7 +83,7 @@
       } catch(PDOException $e) {
         // erro na conexão
         $error = $e->getMessage();
-        echo "Não deu: $error";
+        echo "error: $error";
       }
 
     }
