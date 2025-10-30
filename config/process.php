@@ -28,7 +28,7 @@
       try {
 
         $stmt->execute();
-        $_SESSION["msg"] = "Contato criado com sucesso!";
+        $_SESSION["msg"] = "Cdgarmo criado com sucesso!";
     
       } catch(PDOException $e) {
         // erro na conexão
