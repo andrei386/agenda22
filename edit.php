@@ -16,8 +16,8 @@
         <input type="text" class="form-control" id="Cdgarmo" nome="Cdgarmo" placeholder="Introduce el Cdgarmo" value="<?= $contact['Cdgarmo'] ?>" required>
       </div>
       <div class="form-group">
-        <label for="observations">Observaciones:</label>
-        <textarea type="text" class="form-control" id="observations" nome="observations" placeholder="Introducir observaciones" rows="3"><?= $contact['observations'] ?></textarea>
+        <label for="Extra">Observaciones:</label>
+        <textarea type="text" class="form-control" id="Extra" nome="Extra" placeholder="Introducir observaciones" rows="3"><?= $contact['Extra'] ?></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Para actualizar</button>
     </form>

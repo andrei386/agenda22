@@ -15,15 +15,15 @@
 
       $nome = $data["nome"];
       $Cdgarmo = $data["Cdgarmo"];
-      $observations = $data["observations"];
+      $Extra = $data["Extra"];
 
-      $query = "INSERT INTO EL PRIMO! (nome, Cdgarmo, observations) VALUES (:nome, :Cdgarmo, :observations)";
+      $query = "INSERT INTO EL PRIMO! (nome, Cdgarmo, Extra) VALUES (:nome, :Cdgarmo, :Extra)";
 
       $stmt = $conn->prepare($query);
 
       $stmt->bindParam(":nome", $nome);
       $stmt->bindParam(":Cdgarmo", $Cdgarmo);
-      $stmt->bindParam(":observations", $observations);
+      $stmt->bindParam(":Extra", $Extra);
 
       try {
 
@@ -40,18 +40,18 @@
 
       $nome = $data["nome"];
       $Cdgarmo = $data["Cdgarmo"];
-      $observations = $data["observations"];
+      $Extra = $data["Extra"];
       $id = $data["id"];
 
       $query = "UPDATE contatos 
-                SET nome = :nome, Cdg armo = :Cdg armo, observations = :observations 
+                SET nome = :nome, Cdg armo = :Cdg armo, Extra = :Extra 
                 WHERE id = :id";
 
       $stmt = $conn->prepare($query);
 
       $stmt->bindParam(":nome", $n);
       $stmt->bindParam(":Cdg armo", $Cdgarmo);
-      $stmt->bindParam(":observations", $observations);
+      $stmt->bindParam(":Extra", $Extra);
       $stmt->bindParam(":id", $id);
 
       try {
