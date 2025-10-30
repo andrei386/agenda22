@@ -31,7 +31,7 @@
       </a>
       <div>
         <div class="navbar-nav">
-          <a class="nav-link active" id="home-link" href="<?= $BASE_URL ?>index.php">Almacenar</a>
+          <a class="nav-link active" id="home-link" href="<?= $BASE_URL ?>index.php">Tienda de armaduras</a>
           <a class="nav-link active" href="<?= $BASE_URL ?>create.php">Agregar Contacto</a>
         </div>
       </div>
