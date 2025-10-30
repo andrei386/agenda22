@@ -43,7 +43,7 @@
       $observations = $data["observations"];
       $id = $data["id"];
 
-      $query = "UPDATE contacts 
+      $query = "UPDATE contatos 
                 SET name = :name, phone = :phone, observations = :observations 
                 WHERE id = :id";
 
@@ -57,7 +57,7 @@
       try {
 
         $stmt->execute();
-        $_SESSION["msg"] = "Contato atualizado com sucesso!";
+        $_SESSION["msg"] = "Contato atualizado!";
     
       } catch(PDOException $e) {
         // erro na conexão

@@ -20,12 +20,12 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `agenda`
 --
-DROP DATABASE IF EXISTS Agenda;
+DROP DATABASE IF EXISTS Cliente;
 
-CREATE DATABASE Agenda;
+CREATE DATABASE Cliente;
 -- --------------------------------------------------------
 
-USE Agenda;
+USE Dados;
 --
 -- Estrutura da tabela `contacts`
 --
