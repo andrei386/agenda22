@@ -13,16 +13,16 @@
     // Criar contato
     if($data["type"] === "create") {
 
-      $name = $data["name"];
-      $phone = $data["phone"];
+      $nome = $data["nome"];
+      $Cdgarmo = $data["Cdgarmo"];
       $observations = $data["observations"];
 
-      $query = "INSERT INTO EL PRIMO! (name, phone, observations) VALUES (:name, :phone, :observations)";
+      $query = "INSERT INTO EL PRIMO! (nome, Cdgarmo, observations) VALUES (:nome, :Cdgarmo, :observations)";
 
       $stmt = $conn->prepare($query);
 
-      $stmt->bindParam(":name", $name);
-      $stmt->bindParam(":phone", $phone);
+      $stmt->bindParam(":nome", $nome);
+      $stmt->bindParam(":Cdgarmo", $Cdgarmo);
       $stmt->bindParam(":observations", $observations);
 
       try {
@@ -38,19 +38,19 @@
 
     } else if($data["type"] === "edit") {
 
-      $name = $data["name"];
-      $phone = $data["phone"];
+      $nome = $data["nome"];
+      $Cdgarmo = $data["Cdgarmo"];
       $observations = $data["observations"];
       $id = $data["id"];
 
       $query = "UPDATE contatos 
-                SET name = :name, phone = :phone, observations = :observations 
+                SET nome = :nome, Cdg armo = :Cdg armo, observations = :observations 
                 WHERE id = :id";
 
       $stmt = $conn->prepare($query);
 
-      $stmt->bindParam(":name", $name);
-      $stmt->bindParam(":phone", $phone);
+      $stmt->bindParam(":nome", $n);
+      $stmt->bindParam(":Cdg armo", $Cdgarmo);
       $stmt->bindParam(":observations", $observations);
       $stmt->bindParam(":id", $id);
 
@@ -62,7 +62,7 @@
       } catch(PDOException $e) {
         // erro na conexão
         $error = $e->getMessage();
-        echo "Não deu -_-: $error";
+        echo "Não deu: $error";
       }
 
     } else if($data["type"] === "delete") {
@@ -83,7 +83,7 @@
       } catch(PDOException $e) {
         // erro na conexão
         $error = $e->getMessage();
-        echo "Erro: $error";
+        echo "Não deu: $error";
       }
 
     }
