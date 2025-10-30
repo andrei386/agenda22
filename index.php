@@ -6,8 +6,8 @@
       <p id="msg"><?= $printMsg ?></p>
     <?php endif; ?>
     <h1 id="main-title">Mi Lista</h1>
-    <?php if(count($contacts) > 0): ?>
-      <table class="table" id="contacts-table">
+    <?php if(count($Cdgarmo) > 0): ?>
+      <table class="table" id="Cdgarmo-table">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -17,17 +17,17 @@
           </tr>
         </thead>
         <tbody>
-          <?php foreach($contacts as $contact): ?>
+          <?php foreach($Cdgarmo as $Cdgarmo): ?>
             <tr>
-              <td scope="row" class="col-id"><?= $contact["id"] ?></td>
-              <td scope="row"><?= $contact["nome"] ?></td>
-              <td scope="row"><?= $contact["Cdgarmo"] ?></td>
+              <td scope="row" class="col-id"><?= $Cdgarmo["id"] ?></td>
+              <td scope="row"><?= $Cdgarmo["nome"] ?></td>
+              <td scope="row"><?= $Cdgarmo["Cdgarmo"] ?></td>
               <td class="actions">
-                <a href="<?= $BASE_URL ?>show.php?id=<?= $contact["id"] ?>"><i class="fas fa-eye check-icon"></i></a>
-                <a href="<?= $BASE_URL ?>edit.php?id=<?= $contact["id"] ?>"><i class="far fa-edit edit-icon"></i></a>
+                <a href="<?= $BASE_URL ?>show.php?id=<?= $Cdgarmo["id"] ?>"><i class="fas fa-eye check-icon"></i></a>
+                <a href="<?= $BASE_URL ?>edit.php?id=<?= $Cdgarmo["id"] ?>"><i class="far fa-edit edit-icon"></i></a>
                 <form class="delete-form" action="<?= $BASE_URL ?>/config/process.php" method="POST">
                   <input type="hidden" nome="type" value="delete">
-                  <input type="hidden" nome="id" value="<?= $contact["id"] ?>">
+                  <input type="hidden" nome="id" value="<?= $Cdgarmo["id"] ?>">
                   <button type="submit" class="delete-btn"><i class="fas fa-times delete-icon"></i></button>
                 </form>
               </td>

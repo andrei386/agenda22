@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET nomeS utf8mb4 */;
 
 --
--- Banco de dados: `agenda`
+-- Banco de dados: `Cdgarmo`
 --
 DROP DATABASE IF EXISTS Cliente;
 
