@@ -25,7 +25,7 @@ DROP DATABASE IF EXISTS Cliente;
 CREATE DATABASE Cliente;
 -- --------------------------------------------------------
 
-USE Dados;
+Usar datos;
 --
 -- Estrutura da tabela `contacts`
 --

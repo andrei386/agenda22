@@ -15,7 +15,7 @@
 
 #contacts-table thead {
   color: #FFF;
-  background-color: #2106cc;
+  background-color: #2200bb;
 }
 
 .col-id {
@@ -33,11 +33,11 @@
 }
 
 .check-icon {
-  color: #049326;
+  color: #00ff84;
 }
 
 .edit-icon {
-  color: #0400e6d1;
+  color: #1a008cd1;
 }
 
 .delete-form {
@@ -51,7 +51,7 @@
 }
 
 .delete-icon {
-  color: #c30013;
+  color: #ad0011d7;
 }
 
 #empty-list-text {
@@ -59,7 +59,7 @@
 }
 
 #msg {
-  color: #155724;
+  color: #35b000a3;
   background-color: #D4EDDA;
   border: 1px solid #C3E6CB;
   padding: 10px;
@@ -86,8 +86,8 @@
 }
 
 #back-link {
-  border: 1px solid #0253aebe;
-  color: #005dc0;
+  border: 1px solid #ce5600be;
+  color: #bd0000;
   border-radius: 4px;
   padding: 5px;
 }
