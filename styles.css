@@ -14,8 +14,8 @@
 }
 
 #contacts-table thead {
-  color: #FFF;
-  background-color: #2200bb;
+  color: #ffffff;
+  background-color: #ec4700d3;
 }
 
 .col-id {
@@ -33,11 +33,11 @@
 }
 
 .check-icon {
-  color: #00ff84;
+  color: #199237a2;
 }
 
 .edit-icon {
-  color: #1a008cd1;
+  color: 00 #000000;
 }
 
 .delete-form {
@@ -51,7 +51,7 @@
 }
 
 .delete-icon {
-  color: #ff7700d7;
+  color: #e30000b5;
 }
 
 #empty-list-text {
@@ -59,9 +59,9 @@
 }
 
 #msg {
-  color: #00bf00a3;
-  background-color: #002ddf;
-  border: 1px solid #0018d0;
+  color: #00c617;
+  background-color: #a3e1b1;
+  border: 1px solid #aeeabc;
   padding: 10px;
   text-align: center;
   max-width: 500px;
@@ -86,8 +86,8 @@
 }
 
 #back-link {
-  border: 1px solid #b30000be;
-  color: #bd0000;
+  border: 1px solid #5600ea;
+  color: #ff4d00;
   border-radius: 4px;
   padding: 5px;
 }
