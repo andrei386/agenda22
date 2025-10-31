@@ -1,134 +1,114 @@
 <?php
 
-  session_start();
+session_start();
 
-  include_once("connection.php");
-  include_once("url.php");
+include_once("connection.php");
+include_once("url.php");
 
-  $data = $_POST;
+$data = $_POST;
 
-  // MODIFICAÇÕES NO BANCO
-  if(!empty($data)) {
+// MODIFICAÇÕES NO BANCO
+if (!empty($data)) {
 
     // Criar contato
-    if($data["type"] === "create") {
+    if ($data["type"] === "create") {
 
-      $nome = $data["nome"];
-      $Cdgarmo = $data["Cdgarmo"];
-      $Extra = $data["Extra"];
+        $nome = $data["nome"];
+        $Cdgarmo = $data["Cdgarmo"];
+        $Extra = $data["Extra"];
 
-      $query = "INSERT INTO EL PRIMO! (nome, Cdgarmo, Extra) VALUES (:nome, :Cdgarmo, :Extra)";
+        $query = "INSERT INTO Cdgarmo (nome, Cdgarmo, Extra) 
+                  VALUES (:nome, :Cdgarmo, :Extra)";
 
-      $stmt = $conn->prepare($query);
+        $stmt = $conn->prepare($query);
 
-      $stmt->bindParam(":nome", $nome);
-      $stmt->bindParam(":Cdgarmo", $Cdgarmo);
-      $stmt->bindParam(":Extra", $Extra);
+        $stmt->bindParam(":nome", $nome);
+        $stmt->bindParam(":Cdgarmo", $Cdgarmo);
+        $stmt->bindParam(":Extra", $Extra);
 
-      try {
+        try {
+            $stmt->execute();
+            $_SESSION["msg"] = "Cdgarmo criado com sucesso!";
+        } catch (PDOException $e) {
+            echo "Erro: " . $e->getMessage();
+        }
 
-        $stmt->execute();
-        $_SESSION["msg"] = "Cdgarmo criado com sucesso!";
-    
-      } catch(PDOException $e) {
-        // erro na conexão
-        $error = $e->getMessage();
-        echo "Erro: $error";
-      }
+    } else if ($data["type"] === "edit") {
 
-    } else if($data["type"] === "edit") {
+        $nome = $data["nome"];
+        $Cdgarmo = $data["Cdgarmo"];
+        $Extra = $data["Extra"];
+        $id = $data["id"];
 
-      $nome = $data["nome"];
-      $Cdgarmo = $data["Cdgarmo"];
-      $Extra = $data["Extra"];
-      $id = $data["id"];
+        $query = "UPDATE Cdgarmo
+                  SET nome = :nome, Cdgarmo = :Cdgarmo, Extra = :Extra
+                  WHERE id = :id";
 
-      $query = "UPDATE Cdgarmo
-                SET nome = :nome, Cdgarmo = :Cdgarmo, Extra = :Extra 
-                WHERE id = :id";
+        $stmt = $conn->prepare($query);
 
-      $stmt = $conn->prepare($query);
+        $stmt->bindParam(":nome", $nome);
+        $stmt->bindParam(":Cdgarmo", $Cdgarmo);
+        $stmt->bindParam(":Extra", $Extra);
+        $stmt->bindParam(":id", $id);
 
-      $stmt->bindParam(":nome", $n);
-      $stmt->bindParam(":Cdgarmo", $Cdgarmo);
-      $stmt->bindParam(":Extra", $Extra);
-      $stmt->bindParam(":id", $id);
+        try {
+            $stmt->execute();
+            $_SESSION["msg"] = "Cdgarmo atualizado!";
+        } catch (PDOException $e) {
+            echo "Erro: " . $e->getMessage();
+        }
 
-      try {
+    } else if ($data["type"] === "delete") {
 
-        $stmt->execute();
-        $_SESSION["msg"] = "Cdgarmo atualizado!";
-    
-      } catch(PDOException $e) {
-        // erro na conexão
-        $error = $e->getMessage();
-        echo "erro: $error";
-      }
+        $id = $data["id"];
 
-    } else if($data["type"] === "delete") {
+        $query = "DELETE FROM Cdgarmo WHERE id = :id";
 
-      $id = $data["id"];
+        $stmt = $conn->prepare($query);
 
-      $query = "DELETE FROM Cdgarmor WHERE id = :id";
+        $stmt->bindParam(":id", $id);
 
-      $stmt = $conn->prepare($query);
-
-      $stmt->bindParam(":id", $id);
-      
-      try {
-
-        $stmt->execute();
-        $_SESSION["msg"] = "Cdgarmo removido!";
-    
-      } catch(PDOException $e) {
-        // erro na conexão
-        $error = $e->getMessage();
-        echo "error: $error";
-      }
-
+        try {
+            $stmt->execute();
+            $_SESSION["msg"] = "Cdgarmo removido!";
+        } catch (PDOException $e) {
+            echo "Erro: " . $e->getMessage();
+        }
     }
 
-    // Redirect HOME
-    header("Location:" . $BASE_URL . "../index.php");
+    // Redirect correto
+    header("Location: " . $BASE_URL . "index.php");
+    exit;
 
-  // SELEÇÃO DE DADOS
-  } else {
-    
-    $id;
+} else {
 
-    if(!empty($_GET)) {
-      $id = $_GET["id"];
-    }
+    // SELEÇÃO DE DADOS
+    $id = $_GET["id"] ?? null;
 
-    // Retorna o dado de um Cdgarmo
-    if(!empty($id)) {
+    // Retorna o contato único
+    if (!empty($id)) {
 
-      $query = "SELECT * FROM Cdgarmor WHERE id = :id";
+        $query = "SELECT * FROM Cdgarmo WHERE id = :id";
 
-      $stmt = $conn->prepare($query);
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(":id", $id);
 
-      $stmt->bindParam(":id", $id);
+        $stmt->execute();
 
-      $stmt->execute();
-
-      $contact = $stmt->fetch();
+        $garmor = $stmt->fetch();
 
     } else {
 
-      // Retorna todos os contatos
-      $contacts = [];
+        // Retorna todos os contatos
+        $query = "SELECT * FROM Cdgarmo";
 
-      $query = "SELECT * FROM Cdgarmor";
+        $stmt = $conn->prepare($query);
+        $stmt->execute();
 
-      $stmt = $conn->prepare($query);
-
-      $stmt->execute();
-      
-      $contacts = $stmt->fetchAll();
-
+        $garmos = $stmt->fetchAll();
     }
+}
 
-  }
+// FECHAR CONEXÃO
+$conn = null;
 
-  // FECHAR CONEXÃO
-  $conn = null;

@@ -8,11 +8,11 @@
       <input type="hidden" nome="type" value="edit">
       <input type="hidden" nome="id" value="<?= $contact['id'] ?>">
       <div class="form-group">
-        <label for="nome">Nombre de Contacto:</label>
+        <label for="nome">Nombre del Contacto:</label>
         <input type="text" class="form-control" id="nome" nome="nome" placeholder="Introduce el nombre" value="<?= $contact['nome'] ?>" required>
       </div>
       <div class="form-group">
-        <label for="Cdgarmo">Cdgarmo de contacto:</label>
+        <label for="Cdgarmo">Cdgarmo del contacto:</label>
         <input type="text" class="form-control" id="Cdgarmo" nome="Cdgarmo" placeholder="Introduce el Cdgarmo" value="<?= $contact['Cdgarmo'] ?>" required>
       </div>
       <div class="form-group">

@@ -6,7 +6,7 @@
       <p id="msg"><?= $printMsg ?></p>
     <?php endif; ?>
     <h1 id="main-title">Mi Lista</h1>
-    <?php if(count($Cdgarmo) > 0): ?>
+    <?php if(count($garmos) > 0): ?>
       <table class="table" id="Cdgarmo-table">
         <thead>
           <tr>
@@ -17,7 +17,7 @@
           </tr>
         </thead>
         <tbody>
-          <?php foreach($Cdgarmo as $Cdgarmo): ?>
+          <?php foreach($garmos as $Cdgarmo): ?>
             <tr>
               <td scope="row" class="col-id"><?= $Cdgarmo["id"] ?></td>
               <td scope="row"><?= $Cdgarmo["nome"] ?></td>
