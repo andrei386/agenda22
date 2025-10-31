@@ -32,7 +32,7 @@ Usar datos;
 
 CREATE TABLE `Cdgarmo` (
   `id` int(11) NOT NULL,
-  `nome` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
   `Cdgarmo` varchar(20) DEFAULT NULL,
   `Extra` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -41,7 +41,7 @@ CREATE TABLE `Cdgarmo` (
 -- Extraindo dados da tabela `Cdgarmo`
 --
 
-INSERT INTO `Cdgarmo` (`id`, `nome`, `Cdgarmo`, `Extra`) VALUES
+INSERT INTO `Cdgarmo` (`id`, `name`, `Cdgarmo`, `Extra`) VALUES
 (1, 'Neto horario', '11999998888', 'Niggar'),
 (4, 'Valkyria (CR)', '(11)9999:4698', 'WoW'),
 (5, 'Peter', '119664:2267', 'Spi'),

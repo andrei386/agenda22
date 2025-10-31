@@ -13,7 +13,7 @@ if (!empty($data)) {
     // Criar contato
     if ($data["type"] === "create") {
 
-        $nome = $data["nome"];
+        $name = $data["nome"];
         $Cdgarmo = $data["Cdgarmo"];
         $Extra = $data["Extra"];
 
@@ -22,7 +22,7 @@ if (!empty($data)) {
 
         $stmt = $conn->prepare($query);
 
-        $stmt->bindParam(":nome", $nome);
+        $stmt->bindParam(":nome", $name);
         $stmt->bindParam(":Cdgarmo", $Cdgarmo);
         $stmt->bindParam(":Extra", $Extra);
 
@@ -35,7 +35,7 @@ if (!empty($data)) {
 
     } else if ($data["type"] === "edit") {
 
-        $nome = $data["nome"];
+        $name = $data["nome"];
         $Cdgarmo = $data["Cdgarmo"];
         $Extra = $data["Extra"];
         $id = $data["id"];
@@ -46,7 +46,7 @@ if (!empty($data)) {
 
         $stmt = $conn->prepare($query);
 
-        $stmt->bindParam(":nome", $nome);
+        $stmt->bindParam(":nome", $name);
         $stmt->bindParam(":Cdgarmo", $Cdgarmo);
         $stmt->bindParam(":Extra", $Extra);
         $stmt->bindParam(":id", $id);
